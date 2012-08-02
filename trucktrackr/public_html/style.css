@@ -1,0 +1,437 @@
+/*
+    Table of contents:
+       1) styles that apply to all pages, e.g. body, footer, a:*
+       2) styles that apply only to the front page
+       3) styles for the search boxes on the results page
+       4) styling for the map and map area
+       5) styling for filters
+       6) CSS for rounded corners boxes
+       7) styles for the jQuery tablesorter
+
+    Note: Only section #1 is ordered by importance (e.g. body before link styling,
+          etc.) but the other sections are ordered alphabetically
+
+    Validation:
+       1) Issues one warning for #address_input's border and background-color
+          having the same color, but we need both: background-color for 
+          obvious reasons and border-color to avoid the default beveled border.
+       2) We use the rounded corner properties of -mozilla and -webkit which 
+          do not validate.
+*/
+
+/* styles for all areas of the website */
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #6accff;
+    text-align: center;
+    font: normal 14px helvetica, arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* container is needed to center */
+.container {
+    margin: 0 auto;
+    text-align: left;
+    width: 750px;
+}
+
+/* wrapper is needed to make room for the footer */
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push {
+    height: 50px; /* .push must be the same height as .footer */
+    font-weight: bold;
+    clear: both;
+    color: #fff;
+    background-color: inherit;
+    font: normal 12px helvetica, arial, sans-serif;
+}
+
+a {
+    color: #239ddd;
+    background-color: inherit;
+}
+
+a:hover, a:active {
+    color: #00679d;
+    background-color: inherit;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #fb5344;
+    background-color: inherit;
+}
+
+.showHideFiltersLink {
+    color: #fff;
+}
+
+/* styles for the front page only */
+
+#address_area {
+    width: 640px;
+    height: 300px;
+    padding-top: 100px;
+}
+
+#address_input {
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    background-color: #6accff;
+    border-color: #6accff;
+    border-style: solid;
+    border-width: 1px 0px 1px 1px;
+    font: 18px helvetica, arial, sans-serif;
+    margin: 0;
+    outline-width: 0;
+    padding: 10px 8px;
+    width: 300px;
+}
+
+#input_area {
+    width: 390px;
+    height: 125px;
+    margin-top: 12px;
+    padding-top: 35px;
+    margin-left: 20px;
+    float: left;
+    position: relative;
+}
+
+#logo {
+    width: 619px;
+    height: 56px;
+    margin-top: 20px;
+    position: relative;
+    float: left;
+    background-image: url("images/logo_large.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#main_area {
+    width: 640px;
+    height: 137px;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+    clear: both;
+    float: left;
+    background-image: url("images/address_area.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#search label {
+    color: #239ddd;
+    background-color: inherit;
+    font: normal 12px verdana, arial, sans-serif;
+    margin-top: 3px;
+    display: block;
+}
+
+#submit {
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border: 1px solid #6accff;
+    background-color: #239ddd;
+    color: #ffffff;
+    font: normal 18px helvetica, arial, sans-serif;
+    margin-left: -0.5em;
+    outline: medium none;
+    padding: 9px 16px;
+    text-decoration: none;
+}
+
+#submit:focus, #submit:hover {
+    background-color: #00679d;
+}
+
+#truck_area {
+    width: 214px;
+    height: 262px;
+    float: left;
+    position: relative;
+    margin-top: -80px;
+}
+
+/* styles for the search boxes on the results page */
+
+#logo_box {
+    width: 205px;
+    height: 40px;
+    float: left;
+    position: relative;
+    background-image: url("images/caption_arrow.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+#search_box {
+    width: 403px;
+    margin-bottom: 20px;
+    float: left;
+    position: relative;
+}
+
+#search_box_content
+{
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-bottom: 4px;
+    background: #fff;
+    height: 42px;
+}
+
+/* styling for the map and map area */
+
+#map
+{
+    width: 750px;
+    height: 465px;
+}
+
+#mapAndFilters {
+    width: 770px;
+    height: 572px;
+    margin-top: 20px;
+}
+
+#map_container {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    background-color: #fff;
+}
+
+#map_results {
+    width: 770px;
+    height: 445px;
+    float: left;
+    position: relative;
+}
+
+
+/* styling for filters */
+
+#costFilters {
+    float: left;
+    width: 100px;
+}
+
+#filters {
+    width: 770px;
+    height: 184px;
+    margin-bottom: 10px;
+    clear: both;
+    float: left;
+    position: relative;
+}
+
+#filters_content
+{
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    background-image: url("images/filters_label.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: 760px;
+    height: 140px;
+}
+
+.foodTypeFilters {
+    width: 120px;
+    float:left;
+}
+
+#resultsFilters {
+    background-color: #fff;
+    width: 195px;
+    height: 130px;
+    float: left;
+    position: relative;
+    clear: right;
+}
+
+#showHideFilters {
+    width: 770px;
+    height: 20px;
+    clear: both;
+    float: left;
+    text-align: center;
+    color: #fff;
+}
+
+#update_button {
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border: 1px solid #6accff;
+    background-color: #239ddd;
+    color: #ffffff;
+    font: normal 12px helvetica, arial, sans-serif;
+    padding: 4px 8px;
+    text-decoration: none;
+    float: right;
+}
+
+#update_area {
+    margin-top: 15px;
+    width: 76px;
+    height: 35px;
+    text-align: left;
+    position: relative;
+    clear: both;
+    float: right;
+}
+
+/* CSS for rounded corners boxes */
+
+.gmap { display:block; }
+
+.gmap * {
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    font-size: .01em;
+    background: #ffffff
+}
+
+.gmap1 {
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-left: 1px solid #aae1ff;
+    border-right: 1px solid #aae1ff;
+    background: #d9f2ff
+}
+
+.gmap2{
+    margin-left:1px;
+    margin-right:1px;
+    padding-right:1px;
+    padding-left:1px;
+    border-left:1px solid #78d1ff;
+    border-right:1px solid #78d1ff;
+    background:#e2f5ff;
+}
+
+.gmap3{
+    margin-left: 1px;
+    margin-right: 1px;
+    border-left: 1px solid #e2f5ff;
+    border-right: 1px solid #e2f5ff;
+}
+
+.gmap4{
+    border-left: 1px solid #aae1ff;
+    border-right: 1px solid #aae1ff;
+}
+
+.gmap5{
+    border-left: 1px solid #d9f2ff;
+    border-right: 1px solid #d9f2ff;
+}
+
+/* styles for the jQuery tablesorter */
+
+.click {
+    font-weight: bold;
+    background-color: #ffff00;
+}
+
+#resultsTable {
+    width: 770px;
+    margin-bottom: 60px;
+    float: left;
+    position: relative;
+    clear: left;
+}
+
+#table_content
+{
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    background: #fff;
+    background-image: url("images/results_label.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+table.tablesorter {
+	font-family:arial;
+	margin:10px 0pt 15px;
+	font-size: 10pt;
+	width: 723px;
+	text-align: left;
+	border-bottom: 1px solid #00679d;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	border-bottom: 1px solid #00679d;
+	background-color: #CFF1FF;
+	font-size: 10pt;
+	padding: 4px;
+}
+
+table.tablesorter thead tr .header {
+	background-image: url("images/tablesorter/bg.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+
+table.tablesorter thead tr .headerSortUp {
+	background-image: url("images/tablesorter/asc.gif");
+}
+
+table.tablesorter thead tr .headerSortDown {
+	background-image: url("images/tablesorter/desc.gif");
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #6accff;
+}
+
+tr.hover td {
+    font-weight: bold;
+    background-color: #ffff00;
+}

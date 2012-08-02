@@ -1,0 +1,4 @@
+[30-Jan-2010 07:12:01] PHP Warning:  include(twitter.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/truckt6/public_html/index.php on line 8
+[30-Jan-2010 07:12:01] PHP Warning:  include(twitter.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/truckt6/public_html/index.php on line 8
+[30-Jan-2010 07:12:01] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'twitter.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/truckt6/public_html/index.php on line 8
+[30-Jan-2010 07:12:01] PHP Fatal error:  Class 'Twitter' not found in /home/truckt6/public_html/index.php on line 10

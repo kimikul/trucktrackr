@@ -1,0 +1,249 @@
+body {
+    background-color: #6accff;
+    text-align: center;
+    font: normal 12px helvetica, arial, sans-serif;
+}
+
+a {
+    color: #239ddd;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: left;
+    width: 740px;
+}
+
+#address_area {
+    width: 640px;
+    height: 300px;
+    padding-top: 100px;
+}
+
+#logo {
+    width: 619px;
+    height: 56px;
+    margin-top: 20px;
+    position: relative;
+    float: left;
+    background-image: url("images/logo_large.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#main_area {
+    width: 640px;
+    height: 137px;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+    clear: both;
+    float: left;
+    background-image: url("images/address_area.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#truck_area {
+    width: 214px;
+    height: 262px;
+    float: left;
+    position: relative;
+    margin-top: -80px;
+}
+
+#input_area {
+    width: 390px;
+    height: 125px;
+    margin-top: 12px;
+    padding-top: 35px;
+    margin-left: 20px;
+    float: left;
+    position: relative;
+}
+
+#address_input {
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-topleft: 5px;
+    background: #6accff;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: #6accff;
+    font: 18px helvetica, arial, sans-serif;
+    margin: 0;
+    outline-width: 0;
+    padding: 8px 8px;
+    width: 300px;
+}
+
+#search label {
+    color: #239ddd;
+    font: normal 12px verdana, arial, sans-serif;
+    margin-top: 3px;
+    display: block;
+}
+
+#submit {
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topright: 5px;
+    border: 1px solid #6accff;
+    background-color: #239ddd;
+    color: #ffffff;
+    font: normal 18px helvetica, arial, sans-serif;
+    margin-left: -0.5em;
+    outline: medium none;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#submit:focus, #submit:hover {
+    background-color: #00679d;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push {
+    height: 50px; /* .push must be the same height as .footer */
+    color: #fff;
+    font-weight: bold;
+    clear: both;
+}
+
+#search_box {
+    width: 397px;
+    margin-bottom: 80px;
+    float: left;
+    position: relative;
+}
+
+#search_box_content
+{
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-bottom: 4px;
+    background: #fff;
+    height: 40px;
+}
+
+#logo_box {
+    width: 205px;
+    height: 40px;
+    float: left;
+    position: relative;
+    background-image: url("images/caption_arrow.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+#map_results {
+    width: 520px;
+    float: left;
+    position: relative;
+}
+
+#map_results_content
+{
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    background: #fff;
+    height: 405px;
+}
+
+#filters {
+    width: 200px;
+    height: 405px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    clear: right;
+}
+
+#filters_content
+{
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    background: #fff;
+    height: 405px;
+}
+
+#table {
+    width: 730px;
+    margin-top: 9px;
+    margin-bottom: 60px;
+    float: left;
+    position: relative;
+    clear: left;
+}
+
+#table_content
+{
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    background: #fff;
+}
+
+/* CSS for rounded corners boxes */
+.gmap { display:block; }
+
+.gmap * {
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    font-size: .01em;
+    background: #ffffff
+}
+
+.gmap1 {
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-left: 1px solid #aae1ff;
+    border-right: 1px solid #aae1ff;
+    background: #d9f2ff
+}
+
+.gmap2{
+    margin-left:1px;
+    margin-right:1px;
+    padding-right:1px;
+    padding-left:1px;
+    border-left:1px solid #78d1ff;
+    border-right:1px solid #78d1ff;
+    background:#e2f5ff;
+}
+
+.gmap3{
+    margin-left: 1px;
+    margin-right: 1px;
+    border-left: 1px solid #e2f5ff;
+    border-right: 1px solid #e2f5ff;
+}
+
+.gmap4{
+    border-left: 1px solid #aae1ff;
+    border-right: 1px solid #aae1ff;
+}
+
+.gmap5{
+    border-left: 1px solid #d9f2ff;
+    border-right: 1px solid #d9f2ff;
+}
+
